@@ -1,0 +1,47 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '3.2.2'
+    id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+}
+
+group = 'org.example'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    //Spring Doc OpenAPI (exclude webjars-locator-core to avoid conflict with spring-boot-starter-web)
+    implementation ('org.springdoc:springdoc-openapi-ui:1.5.2') {
+        exclude group: 'org.webjars', module: 'webjars-locator-core'
+    }
+
+    implementation('com.google.code.gson:gson:2.8.8')
+
+    //Lombok
+    compileOnly 'org.projectlombok:lombok:1.18.20'
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
+
+    //Spring Boot
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'mysql:mysql-connector-java:8.0.33'
+
+    developmentOnly 'org.springframework.boot:spring-boot-devtools'
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    //Mockito y JUnit
+    testImplementation('org.junit.jupiter:junit-jupiter-api:5.7.2')
+    testImplementation('org.junit.jupiter:junit-jupiter-engine:5.7.2')
+    testImplementation 'org.mockito:mockito-core:5.11.0'
+    testImplementation('org.mockito:mockito-inline:5.1.0')
+}
+
+test {
+    useJUnitPlatform()
+    jvmArgs '--add-opens', 'java.base/java.lang=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.lang.reflect=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.util=ALL-UNNAMED',
+            '--add-opens', 'java.base/java.util.concurrent=ALL-UNNAMED'
+}

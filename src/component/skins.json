@@ -1,0 +1,15 @@
+[
+  {"id":"1","name":"Dragon Scale Armor","type":"Armor","price":1000.0,"color":"Red"},
+  {"id":"2","name":"Elven Bow","type":"Weapon","price":800.0,"color":"Green"},
+  {"id":"3","name":"Shadow Cloak","type":"Cloak","price":700.0,"color":"Black"},
+  {"id":"4","name":"Mystic Staff","type":"Weapon","price":1200.0,"color":"Purple"},
+  {"id":"5","name":"Titan Gauntlets","type":"Armor","price":1000.0,"color":"Silver"},
+  {"id":"6","name":"Phoenix Quiver","type":"Weapon","price":800.0,"color":"Orange"},
+  {"id":"7","name":"Ghost Veil","type":"Cloak","price":700.0,"color":"White"},
+  {"id":"8","name":"Sorcerer Wand","type":"Weapon","price":1200.0,"color":"Blue"},
+  {"id":"9","name":"Viking Shield","type":"Shield","price":900.0,"color":"Brown"},
+  {"id":"10","name":"Assassin Dagger","type":"Weapon","price":1100.0,"color":"Black"},
+  {"id":"11","name":"Knight Helmet","type":"Armor","price":950.0,"color":"Grey"},
+  {"id":"12","name":"Invisibility Cloak","type":"Cloak","price":1200.0,"color":"Transparent"},
+  {"id":"13","name":"Dragon Shield","type":"Shield","price":1000.0,"color":"Red"}
+]
